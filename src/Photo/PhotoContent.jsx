@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PhotoComments from "./PhotoComments.jsx";
 
 const PhotoContent = ({ data }) => {
-  const { photo, coments } = data;
+  const { photo, comments } = data;
 
   return (
     <div className={styles.photo}>
@@ -25,8 +25,8 @@ const PhotoContent = ({ data }) => {
             <li>{photo.idade} anos</li>
           </ul>
         </div>
-        <PhotoComments id={photo.id} coments={coments} />
       </div>
+      <PhotoComments id={photo.id} comments={comments} />
     </div>
   );
 };

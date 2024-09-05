@@ -28,7 +28,7 @@
 }
 
 .comments {
-  padding: 0 2rem;
+  background-color: red;
 }
 
 .author {
@@ -80,7 +80,7 @@
 @media (max-width: 64rem) {
   .photo {
     height: auto;
-    max-height: calc(100vh -4rem);
+    max-height: 800px;
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
   }
