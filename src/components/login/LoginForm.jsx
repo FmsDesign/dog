@@ -8,6 +8,7 @@ import styles from "./LoginForm.module.css";
 import stylesBtn from "../forms/Button.module.css";
 
 import { Link } from "react-router-dom";
+import Head from "../Helpe/Head";
 
 const LoginForm = () => {
   const username = useForm();
@@ -23,7 +24,7 @@ const LoginForm = () => {
 
   return (
     <section className={`animationLeft`}>
-      <h1 className="title">Login</h1>
+      <Head title="Login" />;<h1 className="title">Login</h1>
       <form className={styles.forms} onSubmit={handleSubmit}>
         <Input label="Usuário" name="username" type="text" {...username} />
         <Input label="Senha" name="password" type="password" {...password} />
@@ -32,7 +33,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && "Dados Incorretos."} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a Senha?
