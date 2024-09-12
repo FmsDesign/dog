@@ -2,12 +2,15 @@
 <html>
 
 <head>
+  <meta charset="UTF-8" />
   <meta http-equiv="refresh" content="0; url=/dog/" />
   <script>
-    // Redireciona automaticamente qualquer URL para o index
+    // Verifica se a URL já contém "/dog" e evita redirecionar novamente
     var path = window.location.pathname;
-    var newUrl = "/dog" + path;
-    window.location.href = newUrl;
+    if (!path.startsWith("/dog")) {
+      var newUrl = "/dog" + path;
+      window.location.href = newUrl;
+    }
   </script>
 </head>
 
